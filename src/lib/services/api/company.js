@@ -1,7 +1,7 @@
 export const createCompany = async ({company}) => {
     const token = await window.Clerk.session.getToken();
   
-    await fetch("http://localhost:8000/company", {
+    await fetch("https://techhire-backend-production.up.railway.app/company", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -16,7 +16,7 @@ export const createCompany = async ({company}) => {
 export const getCompanyById = async ({id}) => {
   const token = await window.Clerk.session.getToken();
 
-  await fetch(`http://localhost:8000/company/${id}`, {
+  await fetch(`https://techhire-backend-production.up.railway.app/company/${id}`, {
       method: "GET",
       headers: {
         "Authorization":`Bearer ${token}`,
