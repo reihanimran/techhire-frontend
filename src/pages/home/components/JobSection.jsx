@@ -67,7 +67,7 @@ function JobSection({ jobpage, result }) {
   return (
     <section className="py-8 mb-20 px-8">
       <h2 className="text-center mb-20">{jobpage ? "Available Jobs" : "Featured Jobs"}</h2>
-      <div className={`mt-4 flex items-center justify-start overflow-x-auto scrollbar-none ${jobpage ? "flex-wrap" : "flex-nowrap "}`}>
+      <div className={`mt-4 flex items-center justify-start ${jobpage ? "flex-wrap" : "flex-nowrap overflow-x-auto scrollbar-none"}`}>
         {filteredJobs.map((job) => {
           return (
             <JobCard
