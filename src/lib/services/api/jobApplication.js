@@ -1,7 +1,7 @@
 export const getJobApplicationsForJob = async (id) => {
   const token = await window.Clerk.session.getToken();
 
-  const res = await fetch(`https://techhire-backend-production.up.railway.app/jobApplications?jobId=${id}`, {
+  const res = await fetch(`https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobApplications?jobId=${id}`, {
     method: "GET",
     headers: {
       "Authorization":`Bearer ${token}`,
@@ -13,7 +13,7 @@ export const getJobApplicationsForJob = async (id) => {
 
 export const getJobApplicationById = async (id) => {
   const token = await window.Clerk.session.getToken();
-  const res = await fetch(`https://techhire-backend-production.up.railway.app/jobApplications/${id}`, {
+  const res = await fetch(`https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobApplications/${id}`, {
     method: "GET",
     headers: {
       "Authorization":`Bearer ${token}`,
@@ -25,7 +25,7 @@ export const getJobApplicationById = async (id) => {
 
 export const createJobApplication = async (jobApplication) => {
     const token = await window.Clerk.session.getToken();
-    await fetch("https://techhire-backend-production.up.railway.app/jobApplications", {
+    await fetch("https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobApplications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export const createJobApplication = async (jobApplication) => {
   export const getJobApplicationsByCompanyId = async (id) => {
     const token = await window.Clerk.session.getToken();
   
-    const res = await fetch(`https://techhire-backend-production.up.railway.app/jobApplications/company/${id}`, {
+    const res = await fetch(`https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobApplications/company/${id}`, {
       method: "GET",
       headers: {
         "Authorization":`Bearer ${token}`,
