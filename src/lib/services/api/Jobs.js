@@ -1,5 +1,5 @@
 export const getAllJobs = async () => {
-  const res = await fetch("https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobs", {
+  const res = await fetch("https://techhire-backend.vercel.app/jobs", {
     method: "GET",
   });
   const jobs = await res.json();
@@ -9,7 +9,7 @@ export const getAllJobs = async () => {
 export const getJobById = async (id) => {
   const token = await window.Clerk.session.getToken();
 
-  const res = await fetch(`https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobs/${id}`, {
+  const res = await fetch(`https://techhire-backend.vercel.app/jobs/${id}`, {
     method: "GET",
     headers: {
       "Authorization":`Bearer ${token}`,
@@ -22,7 +22,7 @@ export const getJobById = async (id) => {
 export const createJob = async (job) => {
     const token = await window.Clerk.session.getToken();
 
-    await fetch("https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobs", {
+    await fetch("https://techhire-backend.vercel.app/jobs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export const createJob = async (job) => {
 export const getJobsByCompanyId = async (id) => {
   const token = await window.Clerk.session.getToken();
 
-  const res = await fetch(`https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobs/company/${id}`, {
+  const res = await fetch(`https://techhire-backend.vercel.app/jobs/company/${id}`, {
     method: "GET",
     headers: {
       "Authorization":`Bearer ${token}`,
@@ -48,7 +48,7 @@ export const getJobsByCompanyId = async (id) => {
 export const deleteJobById = async (id) => {
   const token = await window.Clerk.session.getToken();
 
-  const res = await fetch(`https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobs/${id}`, {
+  const res = await fetch(`https://techhire-backend.vercel.app/jobs/${id}`, {
     method: "DELETE",
     headers: {
       "Authorization": `Bearer ${token}`,
@@ -65,7 +65,7 @@ export const deleteJobById = async (id) => {
 export const UpdateJobById = async (job, id) => {
   const token = await window.Clerk.session.getToken();
 
-  await fetch(`https://techhire-backend-htughg98t-reihanimrans-projects.vercel.app/jobs/${id}`, {
+  await fetch(`https://techhire-backend.vercel.app/jobs/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
